@@ -1,0 +1,105 @@
+.dashboard {
+
+  display: flex;
+  width: 100%;
+  
+
+
+  .left {
+    flex : 8;
+    margin-left: 80px;
+    padding: 20px;
+    width: 100%;
+
+
+    .welcome-section {
+
+      .welcome-message {
+        font-size: 34px;
+        padding: 30px;
+
+        span {
+          color: #FF0101;
+        }
+      }
+
+      p {
+        margin-left: 30px;
+      }
+    }
+
+    .activity {
+      margin-top: 50px;
+      width: 100%;
+      padding: 30px;
+    }
+
+
+
+  }
+
+
+  .right {
+
+    flex: 2;
+  
+    margin-top: 180px;
+
+    .nutritional-info {
+      .section-tite {
+
+      }
+
+      .nutrition-details {
+
+        width: 100%;
+        margin-top: 30px;
+      
+
+
+        .nutrition-item {
+          display: flex; 
+          padding: 10px;
+          gap: 10px;
+          margin-top: 30px;
+        
+          .icon {
+            margin-right: 10px; 
+            width: 50px; 
+          }
+        
+          .text {
+            display: flex; 
+            flex-direction: column; 
+           
+          }
+        
+          img {
+            width: 100%; 
+          }
+        
+          span {
+            font-weight: bold; 
+            margin-bottom: 5px; 
+          }
+        
+          .title {
+            margin: 0; 
+            font-size: 14px; 
+            color: #666; 
+          }
+        }
+        
+        
+        
+        
+
+
+      }
+    }
+  }
+
+
+
+
+}
