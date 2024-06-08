@@ -36,18 +36,19 @@ const Activity = ({ userId }) => {
     fetchData();
   }, [userId]);
 
-//   const CustomTooltip = ({ active, payload }) => {
-//     if (active && payload && payload.length) {
-//       return (
-//         <div className="custom-tooltip">
-//           <p className="label">{`Poids: ${payload[0].value} kg`}</p>
-//           <p className="label">{`Calories brûlées: ${payload[1].value} KCal`}</p>
-//         </div>
-//       );
-//     }
+  const CustomTooltip = ({  payload }) => {
+    if ( payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{` ${payload[0].value}kg`}</p>
+          {console.log(payload)}
+          <p className="label">{`${payload[1].value}KCal`}</p>
+        </div>
+      );
+    }
 
-//     return null;
-//   };
+    return null;
+  };
 
   const CustomLegend = () => (
     <div className="custom-legend">
@@ -62,6 +63,9 @@ const Activity = ({ userId }) => {
     </div>
   );
 
+
+  
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -74,8 +78,8 @@ const Activity = ({ userId }) => {
           <CartesianGrid horizontal={true} vertical={false} />
           <XAxis dataKey="day" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} />
           <YAxis orientation="right" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} stroke="grey" />
-          {/* <Tooltip content={<CustomTooltip />} /> */}
-          <Tooltip/>
+          <Tooltip content={<CustomTooltip />} />
+          {/* <Tooltip/> */}
           <Legend content={<CustomLegend />} verticalAlign="top" align="right" />
           <Bar dataKey="kilogram" fill="#000" radius={[5, 5, 0, 0]} barSize={10} />
           <Bar dataKey="calories" fill="#ff0000" radius={[5, 5, 0, 0]} barSize={10} />

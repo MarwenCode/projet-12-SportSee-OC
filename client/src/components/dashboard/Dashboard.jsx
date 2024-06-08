@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { fetchUserData } from '../../services/dataService.js';
+import { fetchUserData } from "../../services/dataService.js";
 import Infos from "../infos/Infos.jsx";
 import Activity from "../activity/Activity.jsx";
 import axios from "axios";
-import "./dashboard.scss"; 
+import "./dashboard.scss";
 
 const Dashboard = ({ userId }) => {
   const [user, setUser] = useState();
@@ -13,10 +13,10 @@ const Dashboard = ({ userId }) => {
     const fetchUser = async () => {
       try {
         const data = await fetchUserData(userId);
-        console.log(data)
+        console.log(data);
         setUser(data);
       } catch (error) {
-        console.error('Error fetching user data:', error);
+        console.error("Error fetching user data:", error);
       } finally {
         setLoading(false);
       }
@@ -40,7 +40,7 @@ const Dashboard = ({ userId }) => {
   //   fetchUserData();
   // }, [userId]);
 
-  console.log(user)
+  console.log(user);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -66,12 +66,10 @@ const Dashboard = ({ userId }) => {
         <div className="activity">
           <Activity userId={userId} />
         </div>
-
-
       </div>
 
       <div className="right">
-       <Infos user={user} />
+        <Infos user={user} />
       </div>
     </div>
   );
