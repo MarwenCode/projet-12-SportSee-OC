@@ -46,6 +46,8 @@ const Session = ({ userId }) => {
     return null;
   };
 
+
+
   return (
     <div className="session-container">
       <h2>Activité quotidienne</h2>
@@ -54,9 +56,9 @@ const Session = ({ userId }) => {
       ) : (
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={averageSessions} className="line-chart-container">
-            <XAxis dataKey="dayLabel" tickLine={false} axisLine={false} />
+            <XAxis  className='days' dataKey="dayLabel" tickLine={false} axisLine={false}  tick={{ fill: "#FFFFFF" }} />
             {/* <YAxis tickLine={false} axisLine={false} /> */}
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip  content={<CustomTooltip />} />
             <Line type="monotone" dataKey="sessionLength" stroke="#007bff" />
           </LineChart>
         </ResponsiveContainer>

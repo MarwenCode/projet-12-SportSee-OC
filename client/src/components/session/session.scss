@@ -1,41 +1,40 @@
 .session-container {
- 
-    padding: 150px;
-    width: 650px;
-    // margin-top: -180px;
-    background-color: #FF0000;
-    height: 100%;
+  width: 650px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  height: 100%;
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #FFFFFF;
+  }
+
+  .loading-text {
+    font-size: 1.2em;
+    color: #FFFFFF;
+  }
+
+  .line-chart-container{
+    color: white;
+   
 
   
-    h2 {
-      font-size: 1.5em;
-      margin-bottom: 20px;
-      text-align: left;
-      color: #333;
-    }
-  
-    .loading-text {
-      font-size: 1.2em;
-      color: grey;
-    }
-  
-    .line-chart-container {
-      .recharts-wrapper {
-        margin: 0 auto;
-      }
-    }
-  
-    .custom-tooltip {
-      background-color: #ff0000;
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 0.9em;
-      line-height: 1.4;
-  
-      p {
-        margin: 0;
-      }
-    }
+
   }
+
+  // .custom-tooltip {
+  //   background-color: rgba(0, 0, 0, 0.8);
+  //   padding: 10px;
+  //   border-radius: 5px;
+  //   color: #FFFFFF;
+
+  //   p {
+  //     margin: 0;
+  //     color: #FFFFFF; 
+  //   }
+  // }
+}
+
   
