@@ -54,10 +54,10 @@ const Dashboard = ({ userId }) => {
     <div className="dashboard">
       <div className="left">
         <div className="welcome-section">
-          <h2 className="welcome-message">
+          <h3 className="welcome-message">
             Bonjour
             <span className="username">{user.data.userInfos.firstName}</span>,
-          </h2>
+          </h3>
           <p className="congratulations">
             Félicitation ! Vous avez explosé vos objectifs hier 👏
           </p>

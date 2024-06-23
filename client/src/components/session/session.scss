@@ -1,40 +1,74 @@
 .session-container {
-  width: 650px;
-  background-color: #FF0000;
-  color: #FFFFFF;
-  height: 100%;
-
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    text-align: left;
-    color: #FFFFFF;
-  }
-
-  .loading-text {
-    font-size: 1.2em;
-    color: #FFFFFF;
-  }
-
-  .line-chart-container{
-    color: white;
-   
-
-  
-
-  }
-
-  // .custom-tooltip {
-  //   background-color: rgba(0, 0, 0, 0.8);
-  //   padding: 10px;
-  //   border-radius: 5px;
-  //   color: #FFFFFF;
-
-  //   p {
-  //     margin: 0;
-  //     color: #FFFFFF; 
-  //   }
-  // }
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 10px;
 }
 
-  
+h2 {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 80%;
+  margin: auto 70px;
+  padding-top: 20px;
+  background: linear-gradient(to right, rgba(197, 192, 192, 0.7), rgba(238, 236, 236, 0.7));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.loading-text {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.line-chart-container {
+  .recharts-surface {
+    .recharts-line {
+      .recharts-dot {
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      &:hover .recharts-dot {
+        opacity: 1;
+      }
+    }
+
+    .recharts-curve.recharts-tooltip-cursor {
+      display: none;
+    }
+  }
+}
+
+.custom-tooltip {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+
+  p {
+    margin-top: -10px;
+    color: #070707;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.custom-xaxis .recharts-cartesian-axis-tick {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.recharts-responsive-container svg {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.shadow-right {
+  filter: drop-shadow(5px 0 5px rgba(0, 0, 0, 0.2));
+}
+
+.shadow-left {
+  filter: drop-shadow(-5px 0 5px rgba(0, 0, 0, 0.2));
+}
+
