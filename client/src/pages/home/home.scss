@@ -6,6 +6,9 @@
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     width: 80%;
     gap: 12px;
+    margin-top: 30px;
+    width:  80%;
+  
 
     .session, .performance, .score {
       flex: 1;
@@ -25,7 +28,9 @@
     }
 
     .score {
-      background-color: wheat;
+      background-color: #f7f6f6;     
+      
+    
     }
   }
 }

@@ -17,7 +17,7 @@ const Infos = ({user}) => {
       </div>
       <div className="nutrition-item">
         <div className="icon">
-        <img  src= "assets/protein-icon.png" /><img />
+        <img  src= "assets/protein-icon.png" />
         </div>
         <div className="text">
           <span>{user.data.keyData.proteinCount}g</span>
@@ -26,7 +26,7 @@ const Infos = ({user}) => {
       </div>
       <div className="nutrition-item">
         <div className="icon">
-        <img  src= "assets/carbs-icon.png" /><img />
+        <img  src= "assets/carbs-icon.png" />
 
         </div>
         <div className="text">
@@ -36,7 +36,7 @@ const Infos = ({user}) => {
       </div>
       <div className="nutrition-item">
         <div className="icon">
-        <img  src= "assets/fat-icon.png" /><img />
+        <img  src= "assets/fat-icon.png" />
 
         </div>
         <div className="text">

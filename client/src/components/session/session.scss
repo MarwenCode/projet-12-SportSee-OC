@@ -2,6 +2,8 @@
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 10px;
+ 
+
 }
 
 h2 {
@@ -22,15 +24,20 @@ h2 {
 }
 
 .line-chart-container {
+
+
   .recharts-surface {
     .recharts-line {
       .recharts-dot {
         opacity: 0;
         transition: opacity 0.2s;
+       
+        
       }
 
       &:hover .recharts-dot {
         opacity: 1;
+      
       }
     }
 
@@ -44,6 +51,8 @@ h2 {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
+  height: 40px;
+  width: 90px;
 
   p {
     margin-top: -10px;
@@ -54,21 +63,22 @@ h2 {
   }
 }
 
-.custom-xaxis .recharts-cartesian-axis-tick {
-  padding-left: 10px;
-  padding-right: 10px;
-}
+// .custom-xaxis .recharts-cartesian-axis-tick {
+//   padding-left: 10px;
+//   padding-right: 10px;
+// }
 
 .recharts-responsive-container svg {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  // margin-right: 20px;
 }
 
-.shadow-right {
-  filter: drop-shadow(5px 0 5px rgba(0, 0, 0, 0.2));
-}
 
-.shadow-left {
-  filter: drop-shadow(-5px 0 5px rgba(0, 0, 0, 0.2));
-}
+// .shadow-right {
+//   filter: drop-shadow(5px 0 5px rgba(0, 0, 0, 0.2));
+// }
+
+// .shadow-left {
+//   filter: drop-shadow(-5px 0 5px rgba(0, 0, 0, 0.2));
+// }
 

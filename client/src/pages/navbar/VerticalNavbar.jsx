@@ -18,6 +18,10 @@ const VerticalNavbar = () => {
           <img src="/assets/muscu.png" alt="Musculation" className="navbar-icon" />
         </li>
       </ul>
+
+      <div className="copie">
+        <p>Copyright, SportSee 2024</p>
+      </div>
     </div>
   )
 }

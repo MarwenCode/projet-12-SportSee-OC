@@ -1,24 +1,43 @@
 .infos {
+  height: 100%;
+  // background-color: red;
+  margin-top: 30px;
+ 
+
+
+
     .section-tite {
 
     }
 
     .nutrition-details {
+   
 
       width: 100%;
-      margin-top: 30px;
+      // margin-top: 30px;
+      height: 20vh;
     
 
 
       .nutrition-item {
         display: flex; 
-        padding: 10px;
+        padding: 30px;
         gap: 10px;
-        margin-top: 30px;
+        margin-left: 20px;
+        margin-top: 25%;
+        background-color: #FBFBFB ;
+        border-radius: 10px;
+   
+       width: 80%;
+       height: 120px;
+       width: calc(80% - 20px);
+     
       
         .icon {
           margin-right: 10px; 
           width: 50px; 
+          
+        
         }
       
         .text {

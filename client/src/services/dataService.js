@@ -21,3 +21,9 @@ export const fetchUserPerformance = async (userId) => {
   const response = await axios.get(`${API_BASE_URL}/user/${userId}/performance`);
   return response.data;
 };
+
+
+export const fetchUserScore = async (userId) => {
+  const response = await axios.get(`${API_BASE_URL}/user/${userId}`);
+  return response.data.score
+};

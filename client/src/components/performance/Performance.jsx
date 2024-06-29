@@ -57,20 +57,21 @@ const Performance = ({ userId }) => {
   }));
 
   return (
-<div className="StyledContainer">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="radarChart">
+      <ResponsiveContainer width="85%" height="100%">
         <RadarChart
           cx="50%"
           cy="50%"
           outerRadius="80%"
-          data={mappedPerformance}
-        >
-          <PolarGrid />
-          <PolarAngleAxis      dataKey="kindLabel"
-    tick={{ fill: "white" }}
-    tickMargin={20} />
+          data={mappedPerformance}>
+            <PolarGrid radialLines={false} stroke="#FFF" />
+          <PolarAngleAxis
+            dataKey="kindLabel"
+            tick={{ fill: "white" }}
+            tickMargin={20}
+          />
           <Radar
-            name="Mike"
+           
             dataKey="value"
             stroke="#FF0000"
             fill="#FF0000"

@@ -36,19 +36,20 @@ const Activity = ({ userId }) => {
     fetchData();
   }, [userId]);
 
-  const CustomTooltip = ({  payload }) => {
-    if ( payload.length) {
+  const CustomTooltip = ({ payload }) => {
+    if (payload.length) {
       return (
-        <div className="custom-tooltip">
-          <p className="label">{` ${payload[0].value}kg`}</p>
-          {console.log(payload)}
-          <p className="label">{`${payload[1].value}KCal`}</p>
+        <div style={{ backgroundColor: '#ff0000', color: '#fff', padding: '15px', fontSize: '12px', margin: '6px', height: '100px',width:"70px"
+         }}>
+          <p style={{ marginBottom: '20px' }}>{` ${payload[0].value}kg`}</p>
+          <p>{`${payload[1].value}KCal`}</p>
         </div>
       );
     }
-
+  
     return null;
   };
+  
 
   const CustomLegend = () => (
     <div className="custom-legend">
@@ -75,7 +76,7 @@ const Activity = ({ userId }) => {
       <h4 className="chart-title">Activité quotidienne</h4>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={activityData}>
-          <CartesianGrid horizontal={true} vertical={false} />
+          <CartesianGrid horizontal={true} vertical={false}  strokeDasharray="3 3" />
           <XAxis dataKey="day" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} />
           <YAxis orientation="right" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} stroke="grey" />
           <Tooltip content={<CustomTooltip />} />

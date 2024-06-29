@@ -40,12 +40,16 @@
  
     
 
-.StyledContainer {
+.radarChart {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .recharts-layer.recharts-polar-angle-axis {
+    font-size: 12px;
+  }
 
   .recharts-layer.recharts-polar-angle-axis > g > g:nth-child(1) > text {
     transform: translateY(-5px);
@@ -57,11 +61,17 @@
   }
 
   .recharts-layer.recharts-polar-angle-axis > g > g:nth-child(4) > text {
-    transform: translateY(15px);
+    transform: translateY(5px);
   }
 
   .recharts-layer.recharts-polar-angle-axis > g > g:nth-child(5) > text,
   .recharts-layer.recharts-polar-angle-axis > g > g:nth-child(6) > text {
     transform: translateX(-5px);
   }
+
+  
+
+
+
+
 }
