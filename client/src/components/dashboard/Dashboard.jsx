@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { fetchUserData } from "../../services/dataService.js";
 import Infos from "../infos/Infos.jsx";
 import Activity from "../activity/Activity.jsx";
-import axios from "axios";
 import "./dashboard.scss";
 
 const Dashboard = ({ userId }) => {
@@ -25,20 +24,7 @@ const Dashboard = ({ userId }) => {
     fetchUser();
   }, [userId]);
 
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const response = await axios.get(`http://127.0.0.1:3000/user/${userId}`);
-  //       setUser(response.data);
-  //     } catch (error) {
-  //       console.error('Error fetching user data:', error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
 
-  //   fetchUserData();
-  // }, [userId]);
 
   console.log(user);
 
