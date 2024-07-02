@@ -36,7 +36,7 @@ Ce projet vise à développer une page de profil utilisateur permettant de visua
 
 ### Fonctionnalités
 
-#### Visualisation des Données de Performance
+#### Visualisation des Données 
 - **Activity Component** : Affiche les données d'activité quotidienne sous forme de graphique à barres.
 - **Session Component** : Affiche la durée moyenne des sessions d'entraînement sur une semaine sous forme de graphique linéaire.
 - **Performance Component** : Montre les performances globales de l'utilisateur sur différents aspects (endurance, vitesse, force, etc.) sous forme de radar chart.

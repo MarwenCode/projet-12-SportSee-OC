@@ -63,7 +63,8 @@ const Performance = ({ userId }) => {
           cx="50%"
           cy="50%"
           outerRadius="80%"
-          data={mappedPerformance}>
+          data={mappedPerformance}
+          >
             <PolarGrid radialLines={false} stroke="#FFF" />
           <PolarAngleAxis
             dataKey="kindLabel"
