@@ -7,7 +7,8 @@ import Score from "../../components/score/Score";
 import "./home.scss";
 
 const Home = () => {
-  const userId = import.meta.env.VITE_APP_USER_ID;
+  // const userId = import.meta.env.VITE_APP_USER_ID;
+  const userId = parseInt(import.meta.env.VITE_APP_USER_ID, 10);
 
   return (
     <div className="home">

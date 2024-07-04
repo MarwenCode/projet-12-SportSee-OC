@@ -39,17 +39,24 @@ const Activity = ({ userId }) => {
   const CustomTooltip = ({ payload }) => {
     if (payload.length) {
       return (
-        <div style={{ backgroundColor: '#ff0000', color: '#fff', padding: '15px', fontSize: '12px', margin: '6px', height: '100px',width:"70px"
-         }}>
-          <p style={{ marginBottom: '20px' }}>{` ${payload[0].value}kg`}</p>
+        <div
+          style={{
+            backgroundColor: "#ff0000",
+            color: "#fff",
+            padding: "15px",
+            fontSize: "12px",
+            margin: "6px",
+            height: "100px",
+            width: "70px",
+          }}>
+          <p style={{ marginBottom: "20px" }}>{` ${payload[0].value}kg`}</p>
           <p>{`${payload[1].value}KCal`}</p>
         </div>
       );
     }
-  
+
     return null;
   };
-  
 
   const CustomLegend = () => (
     <div className="custom-legend">
@@ -64,9 +71,6 @@ const Activity = ({ userId }) => {
     </div>
   );
 
-
-  
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -76,13 +80,53 @@ const Activity = ({ userId }) => {
       <h4 className="chart-title">Activité quotidienne</h4>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={activityData}>
-          <CartesianGrid horizontal={true} vertical={false}  strokeDasharray="3 3" />
-          <XAxis dataKey="day" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} />
-          <YAxis orientation="right" tickLine={false} axisLine={false} tick={{ fontSize: 12 }} stroke="grey" />
+          <CartesianGrid
+            horizontal={true}
+            vertical={false}
+            strokeDasharray="3 3"
+          />
+
+          <XAxis
+            dataKey="day"
+            tickLine={false}
+            axisLine={false}
+            tick={{ fontSize: 12 }}
+          />
+          <YAxis
+            dataKey="kilogram"
+            yAxisId="calories"
+            width={60}
+            height={0}
+            orientation="right"
+            type="number"
+            domain={[69, "dataMax+1"]}
+            allowDecimals={false}
+            axisLine={false}
+            tickLine={false}
+            ticks={[69, 70, 71]}
+            interval={0}
+            dx={40}
+          />
+          <YAxis hide={true} dataKey="calories" domain={[0, "dataMax+50"]} />
+
           <Tooltip content={<CustomTooltip />} />
-          <Legend content={<CustomLegend />} verticalAlign="top" align="right" />
-          <Bar dataKey="kilogram" fill="#000" radius={[5, 5, 0, 0]} barSize={10} />
-          <Bar dataKey="calories" fill="#ff0000" radius={[5, 5, 0, 0]} barSize={10} />
+          <Legend
+            content={<CustomLegend />}
+            verticalAlign="top"
+            align="right"
+          />
+          <Bar
+            dataKey="kilogram"
+            fill="#000"
+            radius={[5, 5, 0, 0]}
+            barSize={10}
+          />
+          <Bar
+            dataKey="calories"
+            fill="#ff0000"
+            radius={[5, 5, 0, 0]}
+            barSize={10}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -90,3 +134,4 @@ const Activity = ({ userId }) => {
 };
 
 export default Activity;
+

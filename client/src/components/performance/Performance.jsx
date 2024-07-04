@@ -10,7 +10,7 @@ import {
   Legend,
 } from "recharts";
 import { fetchUserPerformance } from "../../services/dataService";
-import "./performance.scss"; // Assurez-vous d'importer votre fichier SCSS ici
+import "./performance.scss"; 
 
 const Performance = ({ userId }) => {
   const [userPerformance, setUserPerformance] = useState([]);

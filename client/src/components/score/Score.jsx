@@ -68,6 +68,8 @@ const Score = ({ userId }) => {
           <RadialBar
             clockWise={true}
             dataKey="value"
+            cornerRadius={10}
+        
        
           />
 

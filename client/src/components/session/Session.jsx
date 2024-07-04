@@ -14,6 +14,7 @@ const Session = ({ userId }) => {
     const fetchData = async () => {
       try {
         const response = await fetchUserAverageSessions(userId);
+        console.log('Fetched sessions:', response.data);
         const data = response.data;
         const transformedData = data.sessions.map((session) => ({
           ...session,
@@ -41,44 +42,38 @@ const Session = ({ userId }) => {
     return null;
   };
 
-
   const handleMouseMove = (e) => {
     const containerWidth = e.currentTarget.clientWidth;
     const mouseX = e.nativeEvent.offsetX;
     const percentage = (mouseX / containerWidth) * 100;
     setBackgroundPosition(percentage);
+    e.currentTarget.style.setProperty('--bg-pos', `${percentage}%`);
   };
 
   return (
-<div className="session-container" onMouseMove={handleMouseMove}   >
-  <h2>Durée moyenne des sessions</h2>
-  {isLoading ? (
-    <p className="loading-text">Loading average sessions...</p>
-  ) : (
-    <ResponsiveContainer width="100%" height={300}>
-      <LineChart data={averageSessions} className="line-chart-container"  style={{ background: `linear-gradient(90deg, #ff0000 ${backgroundPosition}%, #e60000 ${backgroundPosition}%, #e60000 100%)` }}>     
-        {/* <XAxis  tickSize={5}  tickMargin={2}  dataKey="dayLabel" tickLine={false} axisLine={false} tick={{ fill: "#FFFFFF" }} className="custom-xaxis" /> */}
-
-        <XAxis
-           dataKey="dayLabel"
-          axisLine={false}
-          tickLine={false}
-          width={50}
-          padding={{
-            left: 0,
-            right: 15,
-          }}
-          stroke="#F5F5F5"
-        />
-        <Tooltip content={<CustomTooltip />} />
-        <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF" className='recharts-line recharts-dot' />
-      </LineChart>
-    </ResponsiveContainer>
-  )}
-</div>
-
+    <div className="session-container" onMouseMove={handleMouseMove}>
+      <h2>Durée moyenne des sessions</h2>
+      {isLoading ? (
+        <p className="loading-text">Loading average sessions...</p>
+      ) : (
+        <ResponsiveContainer width="100%" height={300}>
+          <LineChart data={averageSessions} className="line-chart-container">
+            <XAxis
+              dataKey="dayLabel"
+              axisLine={false}
+              tickLine={false}
+              padding={{ left: 0, right: 15 }}
+              stroke="#F5F5F5"
+            />
+            <Tooltip content={<CustomTooltip />} />
+            <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF" className='recharts-line recharts-dot' />
+          </LineChart>
+        </ResponsiveContainer>
+      )}
+    </div>
   );
 };
 
 export default Session;
+
 
