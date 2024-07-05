@@ -99,11 +99,11 @@ const Activity = ({ userId }) => {
             height={0}
             orientation="right"
             type="number"
-            domain={[69, "dataMax+1"]}
+            domain={["dataMin-1", "dataMax+1"]}
             allowDecimals={false}
             axisLine={false}
             tickLine={false}
-            ticks={[69, 70, 71]}
+            ticks={{ fill: "#9B9EAC", fontWeight: 500, fontSize: 14 }}
             interval={0}
             dx={40}
           />
