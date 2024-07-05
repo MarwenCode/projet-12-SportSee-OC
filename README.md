@@ -92,7 +92,12 @@ Pour faciliter le développement et le test en local sans avoir besoin de faire 
      npm start
      ```
 
-Avec ces configurations, vous pouvez facilement basculer entre l'utilisation des données mock et les appels API réels pour le développement et les tests.
+Avec ces configurations, vous pouvez facilement basculer entre l'utilisation des données mock et les appels API 
+réels pour le développement et les tests.
+
+### Utilisation des Variables d'Environnement
+Dans le fichier Home.jsx, la variable d'environnement VITE_APP_USER_ID est utilisée pour récupérer l'ID de l'utilisateur :
+En modifiant la valeur de VITE_APP_USER_ID dans .env.local, vous pouvez facilement tester l'application avec différents utilisateurs.
 
 ### Structure du Projet
 
